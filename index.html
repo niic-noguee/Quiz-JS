@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- A linha abaixo configura a visualização para dispositivos móveis, ajustando a largura inicial e a escala. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz de JavaScript</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!--O Main é a seção principal do conteúdo da página-->
+    <main>
+        <header>
+            <h1>Teste seus conhecimentos em JavaScript!!!</h1>
+        </header>
+
+        <div id="quiz"> <!--Define um contêiner vazio com o ID "quiz" que será preenchido dinamicamente com perguntas do JavaScript.--> </div>
+
+        <template> <!--Define um modelo (template) para itens do quiz. Esse modelo será clonado e preenchido dinamicamente com perguntas e respostas em JavaScript.-->
+            <div class="quiz-item">
+            <!-- Define um contêiner div com a classe "quiz-item", que será usado para cada item do quiz.-->
+                <h3>
+                    Pergunta 01
+                </h3>
+                <dl> <!-- Lista de definição, usada para associar termos (dt) a suas definições (dd).-->
+                    <dt> <!--Termo de uma lista de definição.-->
+                        <input type="radio" name="item" value="0">
+                        <!--Um botão de opção (radio button) que permite ao usuário selecionar uma resposta. O atributo name é definido como "item", garantindo que apenas uma opção seja selecionada por pergunta. O atributo value indica o valor associado a essa opção (0 neste caso).-->
+                        <span>
+                        <!--Um contêiner de texto que contém o texto da resposta ("Resposta A" neste caso).-->
+                            Resposta A
+                        </span>
+                    </dt>
+                </dl>
+            </div>
+        </template>
+
+        <div id="acertos">
+            <strong>Acertos</strong>
+            <span>0 de 10</span>
+        </div>
+
+    <script src="script.js"></script>
+    </main>
+</body>
+</html>
